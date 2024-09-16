@@ -6,7 +6,7 @@ function loadAllPages() {
     $totalBot = localStorage.getItem("$totalBot");
   } else {
     // Jika tidak ada nilai, set default ke 50 dan simpan ke localStorage
-    $totalBot = 50;
+    $totalBot = 10;
     localStorage.setItem("$totalBot", $totalBot);
   }
 
