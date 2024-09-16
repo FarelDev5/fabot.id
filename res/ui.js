@@ -80,6 +80,7 @@ function translate() {
             document.body.style.overflow = "hidden";
             sidebar.classList.remove("show");
             lockGround.classList.remove("add");
+            lockGround.style.display = 'none'
             document.body.classList.remove("lock");
             document.body.style.overflow = "hidden";
           }, 100);
