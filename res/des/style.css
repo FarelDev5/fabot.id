@@ -763,7 +763,7 @@ body.hide-header .header {
   height: 100vh;
   text-align: center;
   position: fixed;
-  bottom: -100vh;
+  bottom: -200rem;
   left: 0;
   transition: 0.3s;
   width: 100%;
