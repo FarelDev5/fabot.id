@@ -172,15 +172,14 @@ toggleThemeButton.addEventListener("click", () => {
 
 // Delete all chats from local storage when button is clicked
 deleteChatButton.addEventListener("click", () => {
-  let popup = 'Are you sure you want to delete all the chats?';
+  let popup = 'delete all the chats?';
 
   if ($lang === 'id-ID') {
-    popup = 'Apakah Anda yakin ingin menghapus semua obrolan?';
+    popup = 'menghapus semua obrolan';
   }
-  if (confirm(popup)) {
-    localStorage.removeItem("saved-chats");
-    loadDataFromLocalstorage();
-  }
+  alert(popup)
+  localStorage.removeItem("saved-chats");
+  loadDataFromLocalstorage();
 });
 
 // Set userMessage and handle outgoing chat when a suggestion is clicked
