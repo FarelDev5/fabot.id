@@ -14,7 +14,7 @@ function getReward() {
   var $totalBot = parseInt(localStorage.getItem("$totalBot")) || 0;
 
   // Tambahkan 5 ke nilai $totalBot
-  $totalBot += 5;
+  $totalBot += 2;
 
   // Simpan kembali nilai $totalBot ke localStorage
   localStorage.setItem("$totalBot", $totalBot);
