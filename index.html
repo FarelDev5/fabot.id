@@ -243,28 +243,29 @@
         "Ai ini dapat membantu anda dalam mengerjakan dan menyelesailan tugas anda dengan cepat dan juga dapat menambah wawasan anda, kami menyediakan layanan ai gratis, tunggu apa lagi ayo buruan download dan tanyakan apa keluhan anda, hanya di:";
 
       function shareFacebook() {
-        const url = encodeURIComponent(window.location.href);
-        const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${encodeURIComponent(description)}`;
-        window.open(fbUrl, "https://boxappstudio.blogspot.com/2024/09/fabot.html?m=1", "width=600,height=400");
-      }
+      const shareUrl = encodeURIComponent("https://boxappstudio.blogspot.com/2024/09/fabot.html?m=1");
 
-      function shareTwitter() {
-        const url = encodeURIComponent(window.location.href);
-        const text = encodeURIComponent(description);
-        const twUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-        window.open(twUrl, "https://boxappstudio.blogspot.com/2024/09/fabot.html?m=1", "width=600,height=400");
-      }
+function shareFacebook() {
+  const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodeURIComponent(description)}`;
+  window.open(fbUrl, "_blank", "width=600,height=400");
+}
 
-      function shareTelegram() {
-        const url = encodeURIComponent(window.location.href);
-        const tgUrl = `https://t.me/share/url?url=${url}&text=${encodeURIComponent(description)}`;
-        window.open(tgUrl, "https://boxappstudio.blogspot.com/2024/09/fabot.html?m=1", "width=600,height=400");
-      }
+function shareTwitter() {
+  const text = encodeURIComponent(description);
+  const twUrl = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${text}`;
+  window.open(twUrl, "_blank", "width=600,height=400");
+}
 
-      function shareWhatsApp() {
-        const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(description)}%20${encodeURIComponent(window.location.href)}`;
-        window.open(waUrl, "https://boxappstudio.blogspot.com/2024/09/fabot.html?m=1", "width=600,height=400");
-      }
+function shareTelegram() {
+  const tgUrl = `https://t.me/share/url?url=${shareUrl}&text=${encodeURIComponent(description)}`;
+  window.open(tgUrl, "_blank", "width=600,height=400");
+}
+
+function shareWhatsApp() {
+  const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(description)}%20${shareUrl}`;
+  window.open(waUrl, "_blank", "width=600,height=400");
+}
+
       document.querySelector(".wtch").addEventListener("click", function () {
         window.location = "./reward.html";
       });
